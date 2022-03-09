@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>zhang</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2022-03-09T02:03:41.367Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>ZHANG</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装Docker</title>
+    <link href="/2022/03/09/%E5%AE%89%E8%A3%85Docker/"/>
+    <id>/2022/03/09/安装Docker/</id>
+    <published>2022-03-09T12:58:01.864Z</published>
+    <updated>2022-03-09T02:03:41.367Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="0-安装Docker"><a href="#0-安装Docker" class="headerlink" title="0.安装Docker"></a>0.安装Docker</h1><p>Docker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。</p><p>Docker CE 分为 <code>stable</code> <code>test</code> 和 <code>nightly</code> 三个更新频道。</p><p>官方网站上有各种环境下的 <a href="https://docs.docker.com/install/" target="_blank" rel="noopener">安装指南</a>，这里主要介绍 Docker CE 在 CentOS上的安装。</p><h1 id="1-CentOS安装Docker"><a href="#1-CentOS安装Docker" class="headerlink" title="1.CentOS安装Docker"></a>1.CentOS安装Docker</h1><p>Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10， CentOS 7 满足最低内核的要求，所以我们在CentOS 7安装Docker。</p><h2 id="1-1-卸载（可选）"><a href="#1-1-卸载（可选）" class="headerlink" title="1.1.卸载（可选）"></a>1.1.卸载（可选）</h2><p>如果之前安装过旧版本的Docker，可以使用下面命令卸载：</p><pre><code>yum remove docker \                  docker-client \                  docker-client-latest \                  docker-common \                  docker-latest \                  docker-latest-logrotate \                  docker-logrotate \                  docker-selinux \                  docker-engine-selinux \                  docker-engine \                  docker-ce</code></pre><h2 id="1-2-安装docker"><a href="#1-2-安装docker" class="headerlink" title="1.2.安装docker"></a>1.2.安装docker</h2><p>首先需要大家虚拟机联网，安装yum工具</p><pre><code class="sh">sudo yum install -y yum-utils \           device-mapper-persistent-data \           lvm2 --skip-broken</code></pre><p>然后更新本地镜像源：</p><pre><code class="shell"># 设置docker镜像源yum-config-manager \    --add-repo \    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.reposed -i &#39;s/download.docker.com/mirrors.aliyun.com\/docker-ce/g&#39; /etc/yum.repos.d/docker-ce.repoyum makecache fast</code></pre><p>然后输入命令：</p><pre><code class="shell">yum install -y docker-ce</code></pre><p>docker-ce为社区免费版本。稍等片刻，docker即可安装成功。</p><h2 id="1-3-启动docker"><a href="#1-3-启动docker" class="headerlink" title="1.3.启动docker"></a>1.3.启动docker</h2><p>Docker应用需要用到各种端口，逐一去修改防火墙设置。非常麻烦，因此建议大家直接关闭防火墙！</p><pre><code class="sh"># 关闭systemctl stop firewalld# 禁止开机启动防火墙systemctl disable firewalld</code></pre><p>通过命令启动docker：</p><pre><code class="sh">systemctl start docker  # 启动docker服务systemctl stop docker  # 停止docker服务systemctl restart docker  # 重启docker服务</code></pre><p>然后输入命令，可以查看docker版本：</p><pre><code>docker -v</code></pre><h2 id="1-4-配置镜像加速"><a href="#1-4-配置镜像加速" class="headerlink" title="1.4.配置镜像加速"></a>1.4.配置镜像加速</h2><p>docker官方镜像仓库网速较差，我们需要设置国内镜像服务：</p><p>参考阿里云的镜像加速文档：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" target="_blank" rel="noopener">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></p><pre><code class="shell">sudo mkdir -p /etc/dockersudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; { &quot;registry-mirrors&quot;:[&quot;https://n0dwemtq.mirror.aliyuncs.com&quot;] }EOFsudo systemctl daemon-reloadsudo systemctl restart docker</code></pre><h1 id="2-CentOS7安装DockerCompose"><a href="#2-CentOS7安装DockerCompose" class="headerlink" title="2.CentOS7安装DockerCompose"></a>2.CentOS7安装DockerCompose</h1><h2 id="2-1-下载"><a href="#2-1-下载" class="headerlink" title="2.1.下载"></a>2.1.下载</h2><p>Linux下需要通过命令下载：</p><pre><code class="sh"># 安装curl -L https://github.com/docker/compose/releases/download/1.23.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose</code></pre><p>如果下载速度较慢，或者下载失败，可以使用课前资料提供的docker-compose文件：</p><p><img src="assets/image-20210417133020614.png" alt="image-20210417133020614"></p><p>上传到<code>/usr/local/bin/</code>目录也可以。</p><h2 id="2-2-修改文件权限"><a href="#2-2-修改文件权限" class="headerlink" title="2.2.修改文件权限"></a>2.2.修改文件权限</h2><p>修改文件权限：</p><pre><code class="sh"># 修改权限chmod +x /usr/local/bin/docker-compose</code></pre><h2 id="2-3-Base自动补全命令："><a href="#2-3-Base自动补全命令：" class="headerlink" title="2.3.Base自动补全命令："></a>2.3.Base自动补全命令：</h2><pre><code class="sh"># 补全命令curl -L https://raw.githubusercontent.com/docker/compose/1.29.1/contrib/completion/bash/docker-compose &gt; /etc/bash_completion.d/docker-compose</code></pre><p>如果这里出现错误，需要修改自己的hosts文件：</p><pre><code class="sh">echo &quot;199.232.68.133 raw.githubusercontent.com&quot; &gt;&gt; /etc/hosts</code></pre><h1 id="3-Docker镜像仓库"><a href="#3-Docker镜像仓库" class="headerlink" title="3.Docker镜像仓库"></a>3.Docker镜像仓库</h1><p>搭建镜像仓库可以基于Docker官方提供的DockerRegistry来实现。</p><p>官网地址：<a href="https://hub.docker.com/_/registry" target="_blank" rel="noopener">https://hub.docker.com/_/registry</a></p><h2 id="3-1-简化版镜像仓库"><a href="#3-1-简化版镜像仓库" class="headerlink" title="3.1.简化版镜像仓库"></a>3.1.简化版镜像仓库</h2><p>Docker官方的Docker Registry是一个基础版本的Docker镜像仓库，具备仓库管理的完整功能，但是没有图形化界面。</p><p>搭建方式比较简单，命令如下：</p><pre><code class="sh">docker run -d \    --restart=always \    --name registry    \    -p 5000:5000 \    -v registry-data:/var/lib/registry \    registry</code></pre><p>命令中挂载了一个数据卷registry-data到容器内的/var/lib/registry 目录，这是私有镜像库存放数据的目录。</p><p>访问<a href="http://YourIp:5000/v2/_catalog" target="_blank" rel="noopener">http://YourIp:5000/v2/_catalog</a> 可以查看当前私有镜像服务中包含的镜像</p><h2 id="3-2-带有图形化界面版本"><a href="#3-2-带有图形化界面版本" class="headerlink" title="3.2.带有图形化界面版本"></a>3.2.带有图形化界面版本</h2><p>使用DockerCompose部署带有图象界面的DockerRegistry，命令如下：</p><pre><code class="yaml">version: &#39;3.0&#39;services:  registry:    image: registry    volumes:      - ./registry-data:/var/lib/registry  ui:    image: joxit/docker-registry-ui:static    ports:      - 8080:80    environment:      - REGISTRY_TITLE=传智教育私有仓库      - REGISTRY_URL=http://registry:5000    depends_on:      - registry</code></pre><h2 id="3-3-配置Docker信任地址"><a href="#3-3-配置Docker信任地址" class="headerlink" title="3.3.配置Docker信任地址"></a>3.3.配置Docker信任地址</h2><p>我们的私服采用的是http协议，默认不被Docker信任，所以需要做一个配置：</p><pre><code class="sh"># 打开要修改的文件vi /etc/docker/daemon.json# 添加内容：&quot;insecure-registries&quot;:[&quot;http://192.168.150.101:8080&quot;]# 重加载systemctl daemon-reload# 重启dockersystemctl restart docker</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;0-安装Docker&quot;&gt;&lt;a href=&quot;#0-安装Docker&quot; class=&quot;headerlink&quot; title=&quot;0.安装Docker&quot;&gt;&lt;/a&gt;0.安装Docker&lt;/h1&gt;&lt;p&gt;Docker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello</title>
+    <link href="/2022/03/09/Test/"/>
+    <id>/2022/03/09/Test/</id>
+    <published>2022-03-09T12:58:01.862Z</published>
+    <updated>2022-03-09T02:43:29.424Z</updated>
+    
+    <content type="html"><![CDATA[<!-- 添加图片 --><!-- ![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg) -->   <!-- 添加链接 --><p><a href="https://github.com/" target="_blank" rel="noopener">前往github</a></p><!-- 添加标题 --><!-- ## 交流群 --><!-- 添加 --><!--     ## 主题特性<!-- 添加选项 --> <!-- - 首页大屏视频 - 首页随机封面 - 图片懒加载 - valine评论 - fancy-box相册 - pjax支持，音乐不间断 - aplayer音乐播放器 --> <p>yml</p><pre><code class="yml"></code></pre><p>java</p><pre><code class="java">public static void mian(String[] args){}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;!-- 添加图片 --&gt;
+&lt;!-- ![](https://wx3.sinaimg.cn/large/006bYVyvly1g069tuf42oj312w0m8ndq.jpg) --&gt;
+   &lt;!-- 添加链接 --&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.co
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2022/03/09/hello-world/"/>
+    <id>/2022/03/09/hello-world/</id>
+    <published>2022-03-09T12:40:41.654Z</published>
+    <updated>2022-03-09T12:40:41.654Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo</title>
+    <link href="/2018/12/12/index/"/>
+    <id>/2018/12/12/index/</id>
+    <published>2018-12-12T14:16:01.000Z</published>
+    <updated>2022-03-09T02:41:52.946Z</updated>
+    
+    <summary type="html">
+    
+      hexo-sakura主题使用教程
+    
+    </summary>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+</feed>
