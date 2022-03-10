@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a: 2022 | zhang</title>
+  <title itemprop="name">Docker介绍及使用 | zhang</title>
   
     <link rel="shortcut icon" href="/images/R-C.ico">
   
@@ -231,160 +231,258 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg);" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Docker介绍及使用</h1>
+      <p class="entry-census">
+        <span>
+          <a href="">
+            <img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="">ZHANG</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-3-10<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2022年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      03月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2022/03/10/String/">
-                          <span style="color:#0bf;">
-                          10日10:02:08</span>
-                          String
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/03/10/基础语法/">
-                          <span style="color:#0bf;">
-                          10日10:02:08</span>
-                          练习
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/03/10/Nacos安装指南/">
-                          <span style="color:#0bf;">
-                          10日09:29:35</span>
-                          Nacos安装
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/03/10/1.1.什么是Docker/">
-                          <span style="color:#0bf;">
-                          10日09:27:18</span>
-                          Docker介绍及使用
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2022/03/09/安装Docker/">
-                          <span style="color:#0bf;">
-                          09日20:58:01</span>
-                          安装Docker
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2021年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2021/12/12/Test/">
-                          <span style="color:#0bf;">
-                          12日22:16:01</span>
-                          Test
-                        </a>
-                      </li>
-                      
-              
-              
-              
-              
-              
-                      <li>
-                        <a href="/2021/12/12/安装elasticsearch/">
-                          <span style="color:#0bf;">
-                          12日22:16:01</span>
-                          elasticsearch
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="1-1-什么是Docker"><a href="#1-1-什么是Docker" class="headerlink" title="1.1.什么是Docker"></a>1.1.什么是Docker</h2><p>微服务虽然具备各种各样的优势，但服务的拆分通用给部署带来了很大的麻烦。</p>
+<ul>
+<li>分布式系统中，依赖的组件非常多，不同组件之间部署时往往会产生一些冲突。</li>
+<li>在数百上千台服务中重复部署，环境不一定一致，会遇到各种问题</li>
+</ul>
+<h3 id="1-1-4-小结"><a href="#1-1-4-小结" class="headerlink" title="1.1.4.小结"></a>1.1.4.小结</h3><p>Docker如何解决大型项目依赖关系复杂，不同组件依赖的兼容性问题？</p>
+<ul>
+<li>Docker允许开发中将应用、依赖、函数库、配置一起<strong>打包</strong>，形成可移植镜像</li>
+<li>Docker应用运行在容器中，使用沙箱机制，相互<strong>隔离</strong></li>
+</ul>
+<p>Docker如何解决开发、测试、生产环境有差异的问题？</p>
+<ul>
+<li>Docker镜像中包含完整运行环境，包括系统函数库，仅依赖系统的Linux内核，因此可以在任意Linux操作系统上运行</li>
+</ul>
+<p>Docker是一个快速交付应用、运行应用的技术，具备下列优势：</p>
+<ul>
+<li>可以将程序及其依赖、运行环境一起打包为一个镜像，可以迁移到任意Linux操作系统</li>
+<li>运行时利用沙箱机制形成隔离容器，各个应用互不干扰</li>
+<li>启动、移除都可以通过一行命令完成，方便快捷</li>
+</ul>
+<h2 id="1-2-Docker和虚拟机的区别"><a href="#1-2-Docker和虚拟机的区别" class="headerlink" title="1.2.Docker和虚拟机的区别"></a>1.2.Docker和虚拟机的区别</h2><p>Docker可以让一个应用在任何操作系统中非常方便的运行。而以前我们接触的虚拟机，也能在一个操作系统中，运行另外一个操作系统，保护系统中的任何应用。</p>
+<p>两者有什么差异呢？</p>
+<p><strong>虚拟机</strong>（virtual machine）是在操作系统中<strong>模拟</strong>硬件设备，然后运行另一个操作系统，比如在 Windows 系统里面运行 Ubuntu 系统，这样就可以运行任意的Ubuntu应用了。</p>
+<p><strong>Docker</strong>仅仅是封装函数库，并没有模拟完整的操作系统，如图：</p>
+<p>对比来看：</p>
+<p><img src="E:\baiduyunpan\springcloud\学习资料\day03-Docker\讲义\assets\image-20210731152243765.png" alt="image-20210731152243765"></p>
+<p>小结：</p>
+<p>Docker和虚拟机的差异：</p>
+<ul>
+<li><p>docker是一个系统进程；虚拟机是在操作系统中的操作系统</p>
+</li>
+<li><p>docker体积小、启动速度快、性能好；虚拟机体积大、启动速度慢、性能一般</p>
+</li>
+</ul>
+<h2 id="1-3-Docker架构"><a href="#1-3-Docker架构" class="headerlink" title="1.3.Docker架构"></a>1.3.Docker架构</h2><h3 id="1-3-1-镜像和容器"><a href="#1-3-1-镜像和容器" class="headerlink" title="1.3.1.镜像和容器"></a>1.3.1.镜像和容器</h3><p>Docker中有几个重要的概念：</p>
+<p><strong>镜像（Image）</strong>：Docker将应用程序及其所需的依赖、函数库、环境、配置等文件打包在一起，称为镜像。</p>
+<p><strong>容器（Container）</strong>：镜像中的应用程序运行后形成的进程就是<strong>容器</strong>，只是Docker会给容器进程做隔离，对外不可见。</p>
+<h3 id="1-3-4-小结"><a href="#1-3-4-小结" class="headerlink" title="1.3.4.小结"></a>1.3.4.小结</h3><p>镜像：</p>
+<ul>
+<li>将应用程序及其依赖、环境、配置打包在一起</li>
+</ul>
+<p>容器：</p>
+<ul>
+<li>镜像运行起来就是容器，一个镜像可以运行多个容器</li>
+</ul>
+<p>Docker结构：</p>
+<ul>
+<li><p>服务端：接收命令或远程请求，操作镜像或容器</p>
+</li>
+<li><p>客户端：发送命令或者请求到Docker服务端</p>
+</li>
+</ul>
+<p>DockerHub：</p>
+<ul>
+<li>一个镜像托管的服务器，类似的还有阿里云镜像服务，统称为DockerRegistry</li>
+</ul>
+<h2 id="1-4-安装Docker"><a href="#1-4-安装Docker" class="headerlink" title="1.4.安装Docker"></a>1.4.安装Docker</h2><p>企业部署一般都是采用Linux操作系统，而其中又数CentOS发行版占比最多，因此我们在CentOS下安装Docker。</p>
+<h1 id="2-Docker的基本操作"><a href="#2-Docker的基本操作" class="headerlink" title="2.Docker的基本操作"></a>2.Docker的基本操作</h1><h2 id="2-1-镜像操作"><a href="#2-1-镜像操作" class="headerlink" title="2.1.镜像操作"></a>2.1.镜像操作</h2><h3 id="2-1-1-镜像名称"><a href="#2-1-1-镜像名称" class="headerlink" title="2.1.1.镜像名称"></a>2.1.1.镜像名称</h3><p>首先来看下镜像的名称组成：</p>
+<ul>
+<li>镜名称一般分两部分组成：[repository]:[tag]。</li>
+<li>在没有指定tag时，默认是latest，代表最新版本的镜像</li>
+</ul>
+<h3 id="2-1-2-镜像命令"><a href="#2-1-2-镜像命令" class="headerlink" title="2.1.2.镜像命令"></a>2.1.2.镜像命令</h3><p>常见的镜像操作命令</p>
+<h3 id="2-1-3-案例1-拉取、查看镜像"><a href="#2-1-3-案例1-拉取、查看镜像" class="headerlink" title="2.1.3.案例1-拉取、查看镜像"></a>2.1.3.案例1-拉取、查看镜像</h3><p>需求：从DockerHub中拉取一个nginx镜像并查看</p>
+<p>1）首先去镜像仓库搜索nginx镜像，比如<a href="https://hub.docker.com/" target="_blank" rel="noopener">DockerHub</a>:</p>
+<p>2）根据查看到的镜像名称，拉取自己需要的镜像，通过命令：docker pull nginx</p>
+<p>3）通过命令：docker images 查看拉取到的镜像</p>
+<h3 id="2-1-4-案例2-保存、导入镜像"><a href="#2-1-4-案例2-保存、导入镜像" class="headerlink" title="2.1.4.案例2-保存、导入镜像"></a>2.1.4.案例2-保存、导入镜像</h3><p>需求：利用docker save将nginx镜像导出磁盘，然后再通过load加载回来</p>
+<p>1）利用docker xx –help命令查看docker save和docker load的语法</p>
+<p>例如，查看save命令用法，可以输入命令：</p>
+<pre><code class="sh">docker save --help
+</code></pre>
+<p>命令格式：</p>
+<pre><code class="shell">docker save -o [保存的目标文件名称] [镜像名称]
+</code></pre>
+<p>2）使用docker save导出镜像到磁盘 </p>
+<p>运行命令：</p>
+<pre><code class="sh">docker save -o nginx.tar nginx:latest
+</code></pre>
+<p>3）使用docker load加载镜像</p>
+<p>先删除本地的nginx镜像：</p>
+<pre><code class="sh">docker rmi nginx:latest
+</code></pre>
+<p>然后运行命令，加载本地文件：</p>
+<pre><code class="sh">docker load -i nginx.tar
+</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.lixingyong.com/2022/03/08/WeChanQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.lixingyong.com/2022/03/08/WeChanSQ96cd3850a85b5b62.jpg"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <!-- <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer> -->
+        <!-- .entry-footer -->
       </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2022/03/10/Nacos安装指南/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                Nacos安装</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2022/03/09/安装Docker/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                安装Docker</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+   <section class="author-profile">
+  <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+    <a href="/about/" class="profile gravatar"><img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+    <div class="meta">
+      <span class="title">Author</span>
+      <h3 itemprop="name">
+      <a href="https://github.com/JoinCreator/JoinCreator.github.io" itemprop="url" rel="author">ZHANG</a>
+      </h3>
     </div>
   </div>
+  <hr>
+  <p><i class="iconfont icon-write"></i>九十九次的理论不如一次的行动来得实际!</p>
+</section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
 
+<!-- <section class="author-profile">
+  <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+    <a href="/about/" class="profile gravatar"><img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+    <div class="meta">
+      <span class="title">Author</span>
+      <h3 itemprop="name">
+      <a href="https://github.com/JoinCreator/JoinCreator.github.io" itemprop="url" rel="author">ZHANG</a>
+      </h3>
+    </div>
+  </div>
+  <hr>
+  <p><i class="iconfont icon-write"></i>九十九次的理论不如一次的行动来得实际!</p>
+</section> -->
+
+
+
+
+<!-- <section class="author-profile">
+    <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+      <a href="/about/" class="profile gravatar"><img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+      <div class="meta">
+        <span class="title">Author</span>
+        <h3 itemprop="name">
+        <a href="https://github.com/JoinCreator/JoinCreator.github.io" itemprop="url" rel="author">ZHANG</a>
+        </h3>
+      </div>
+    </div>
+    <hr>
+    <p><i class="iconfont icon-write"></i>九十九次的理论不如一次的行动来得实际!</p>
+  </section> -->
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
