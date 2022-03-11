@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">zhang</title>
+  
+    <link rel="shortcut icon" href="/images/R-C.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "ZHANGSs";
+  mashiro_option.author_name = "Ss";
+  mashiro_option.site_url = "https://github.com/JoinCreator/JoinCreator.github.io";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.lixingyong.com/2022/03/06/0.jpg.webp,https://cdn.lixingyong.com/2022/03/06/3.jpg.webp,https://cdn.lixingyong.com/2022/03/06/5.jpg.webp,https://cdn.lixingyong.com/2022/03/06/4.jpg.webp,https://cdn.lixingyong.com/2022/03/06/2.jpg.webp,https://cdn.lixingyong.com/2022/03/06/6.jpg.webp,https://cdn.lixingyong.com/2022/03/06/8.jpg.webp,https://cdn.lixingyong.com/2022/03/06/7.jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://github.com/JoinCreator/JoinCreator.github.io">
+          <img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>九十九次的理论不如一次的行动来得实际!</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/JoinCreator" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.lixingyong.com/2022/03/08/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/login?targetUrl=%2Fcreatorcenter" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.lixingyong.com/2022/03/08/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://weibo.com/newlogin?tabtype=weibo&amp;gid=102803&amp;url=https%3A%2F%2Fweibo.com%2F" target="_blank" class="social-github" title="email">
+                    <img src="https://cdn.lixingyong.com/2022/03/08/623472f2caa6be4bacb8745798cbc22b.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">ZHANG</span>
+            <span class="shironeko">Ss</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人链
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/Webhtml">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  " aria-hidden="true"></i>
+                    留言
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          博主
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title"></h1>
+            <p class="entry-census">&nbsp;·&nbsp;2022-3-10&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.9.0"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>HTML5实现留言和回复的页面-H5教程-PHP中文网</title><meta name="keywords" content="html5页面样式,HTML5"><meta name="description" content="这篇文章主要介绍了用HTML5如何实现留言和回复样式,需要的朋友可以参考下"><meta property="article:author" content="不言"><meta property="article:published_first" content=","><meta name="mobile-agent" content="format=html5;url=https://m.php.cn/article/402476.html"><meta http-equiv="Cache-Control" content="no-transform "><link rel="shortcut icon" href="/favicon.ico" mce_href="/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/static/layui/css/layui.css?1"><link rel="stylesheet" href="/static/css/style.min.css?5.2.47"><link rel="alternate" media="only screen and (max-width: 640px)" href="https://m.php.cn/article/402476.html"><!-- 让IE8/9支持媒体查询，从而兼容栅格 --><!--[if lt IE 9]><script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script><script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script><![endif]--><script>var is_mobi=navigator.userAgent.toLowerCase().match(/(ipod|ipad|iphone|android|coolpad|mmp|smartphone|midp|wap|xoom|symbian|j2me|blackberry|wince)/i)!=null;if(is_mobi){window.location.href="https://m.php.cn/article/402476.html";}var _czc = _czc || [];_czc.push(["_setAccount", "1280886301"]);</script><link rel="stylesheet" href="/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css?1"><link rel="stylesheet" href="/static/ueditor/third-party/SyntaxHighlighter/shCoreDefault1.css"><style type="text/css">.layui-badge-dots{margin-right: 15px;width: 5px;height: 5px;background: #bbb!important;position: relative;display: inline-block;font-size: 12px;text-align: center;background-color: #FF5722;color: #fff;padding: 0;border-radius: 50%;}.relevant{color: #666;}.relevant:hover{color: #bbb}.php-article .detail-content-wrap th{background-color: #e9ecef;}.php-article .detail-content-wrap table{margin-bottom:15px;}.content ul li {list-style: unset;margin-left: 25px;font-size:16px;margin:8px 0 8px 30px;color:#3d464d;}.page ul li{list-style:none;font-size: 14px;margin-left: 0;}.content ul li p{padding:0!important;}.profile-info .layui-icon-auz{padding-left:10px;}.php-article .content h2{padding-left:10px;font-weight:600;}</style><script type="application/ld+json">{"@context": "https://zhanzhang.baidu.com/contexts/cambrian.jsonld","@id": "https://www.php.cn/html5-tutorial-402476.html","title": "HTML5实现留言和回复的页面","description": "这篇文章主要介绍了用HTML5如何实现留言和回复样式,需要的朋友可以参考下","images": ["https://img.php.cn/upload/article/000/000/009/5b1b8d78e5ba8969.jpg"],"pubDate": "2018-06-09T16:19:17","upDate": "2018-06-09T16:19:17"}</script></head><body class="site-home" id="LAY_home" style="background-color: #eee;"><div class="topimages"><a href="https://www.php.cn/course/1396.html" rel="nofollow" target="_blank"><img src="https://img.php.cn/upload/course/000/000/071/6228121210bf9428.jpg" style="left:50%;" alt="公益直播：4小时入门php，实战一个邮件发送系统"></a><i class="layui-icon layui-icon-close" title="关闭"></i></div><div class="layui-header header header-index"><div class="header-indexs-childs"><div class="php-logo"><a href="https://www.php.cn/" class="hide-text" title="php中文网" target="_blank" rel="noopener"></a></div><ul class="layui-nav php-nav"><li class="layui-nav-item "><a href="/" title="php中文网首页">首页</a><dl class="layui-nav-child"></dl></li><li class="layui-nav-item "><a href="/course.html" title="视频教程">视频教程 <i class="layui-icon layui-icon-down ft-12"></i></a><dl class="layui-nav-child"><dd><a href="/course.html" target="_blank">视频课程</a></dd><dd><a href="/course/type/8/live.html" target="_blank">直播课程</a></dd></dl></li><li class="layui-nav-item "><a href="javascript:;" title="学习路径" target="_blank" rel="noopener">学习路径 <i class="layui-icon layui-icon-down ft-12"></i></a><dl class="layui-nav-child"><dd><a href="/course/type/3.html" target="_blank">入门教程</a></dd><dd><a href="/map/dugu.html" target="_blank">独孤九贱</a></dd><dd><a href="/map/yunv.html" target="_blank">玉女心经</a></dd><dd><a href="/toutiao-409221.html" target="_blank">天龙八部</a></dd><dd><a href="/course/type/6.html" target="_blank">趣味闯关</a></dd></dl></li><li class="layui-nav-item"><a target="_blank" href="/k.html" title="PHP培训">PHP培训<img src="/static/images/new.png" width="17" height="12" class="HeaderKIcon"></a></li><li class="layui-nav-item"><a target="_blank" href="/xiazai/" title="资源下载">资源下载 <i class="layui-icon layui-icon-down ft-12"></i></a><dl class="layui-nav-child"><dd><a href="/xiazai/gongju" target="_blank" title="PHP工具">工具下载</a></dd><dd><a href="/xiazai/tool" target="_blank" title="在线工具">在线工具</a></dd><dd><a href="/xiazai/shouce" target="_blank" title="手册下载">手册下载</a></dd><dd><a href="/xiazai/learn" target="_blank" title="电子课件">电子课件</a></dd><dd><a href="/xiazai/js" target="_blank" title="js特效">js特效</a></dd><dd><a href="/xiazai/code" target="_blank" title="网站源码">网站源码</a></dd><dd><a href="/xiazai/sucai" target="_blank" title="网站素材">网站素材</a></dd><dd><a href="/xiazai/leiku" target="_blank" title="类库下载">类库下载</a></dd></dl></li><li class="layui-nav-item layui-hide-xs "><a href="/article.html" title="技术文章">技术文章 <i class="layui-icon layui-icon-down ft-12"></i></a><dl class="layui-nav-child"><dd><a href="/toutiao.html" target="_blank">头条</a></dd><dd><a href="/web-designer.html" target="_blank">前端开发</a></dd><dd><a href="/be/" target="_blank">后端开发</a></dd><dd><a href="/shujuku-tutorials.html" target="_blank">数据库</a></dd><dd><a href="/phpkj/" target="_blank">php框架</a></dd><dd><a href="/jishu/" target="_blank">每日编程</a></dd></dl></li><li class="layui-nav-item "><a href="javascript:;" title="社区问答" target="_blank" rel="noopener">社区 <i class="layui-icon layui-icon-down ft-12"></i></a><dl class="layui-nav-child"><dd><a href="/wenda.html" target="_blank">问答</a></dd><dd><a href="/blog.html" target="_blank">博客</a></dd></dl></li><li class="layui-nav-item "><a href="javascript:;" title="更多" target="_blank" rel="noopener"><img class="martop-4" src="/static/images/more.png" width="30"></a><dl class="layui-nav-child"><dd><a href="/dic.html" target="_blank">编程词典</a></dd><dd><a href="/app/" target="_blank">APP下载</a></dd></dl></li></ul><ul class="php-user"><li><span id="login">登录</span></li><li class="php-reg"><span id="reg">注册</span></li></ul><div class="layui-form component"><div class="layui-form-select"><div class="layui-select-title"><input type="text" id="key_words" placeholder="输入关键词搜索" onkeyup="keyup()" class="layui-input"><a href="javascript:;" onclick="searchs()" target="_blank" rel="noopener"><i class="layui-icon">&#xe615;</i></a></div></div></div><div class="clear"></div></div></div><div class="layui-main" style=" margin-top: 20px;"><div class="layui-row php-article"><div class="layui-col-md8 article-list-left"><div class="profile"><div><a href="/">首页</a> ><a href="/web-designer.html">web前端</a> ><a href="/html5-tutorial.html">H5教程</a> > 正文</div><h1>HTML5实现留言和回复的页面</h1><span title="是否原创"><i class="layui-icon">&#xe609;</i>原创</span><span><i class="layui-icon" title="添加时间">&#xe60e;</i>2018-06-09 16:19:17</span><span><i class="layui-icon" title="评论">&#xe63a;</i>0</span><span class="hot"><i class="layui-icon" title="浏览">&#xe756;</i>4519</span></div><div class="detail-content-wrap"><div class="content"><span class="content_article_viewer_show">这篇文章主要介绍了用HTML5如何实现留言和回复样式,需要的朋友可以参考下<p></p><p>具体就不做详细讲解了，直接上代码：</p><p class="jb51code"></p><pre class="brush:html;toolbar:false;">&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;author&quot; content=&quot;http://www.webkfa.com/&quot; /&gt;
+    &lt;title&gt;web开发-webkfa.com&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    *{
+    margin:0;padding:0;
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color: rgba(210,210,210,0.35); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    -webkit-user-select: none; /* prevent copy paste, to allow, change &#39;none&#39; to &#39;text&#39; */
+    }
+    body{font-family:&quot;微软雅黑&quot;;font-size:12px;}
+    ul,li{list-style:none;}
+    .ylcon{width:100%;min-width:320px;}
+    .tit{height:26px;line-height:26px;padding:0px 15px;position:relative;font-size:15px;color:#aaa;border-bottom:1px solid rgba(0, 0, 0, 0.15);}
+    
+    .story{border-bottom:1px dashed #cecece;padding:0 15px 3px;position:relative;}
+    .story_t{font-size:1.2em;color:rgba(0,0,0,1);padding-top:5px;padding-bottom:2px;}
+    .story_m{color:rgba(110,110,110,1);line-height:21px;word-break:break-all;word-wrap:break-word;overflow:hidden;font-size:1.2em;padding:2px 0;}
+    .story_time{color:rgba(154,154,154,1);padding:2px 0;}
+    .story_hf{background:rgb(245,245,245);font-size:1.2em;border:1px solid rgba(204,204,204,0.2);border-radius:2px;color:rgba(110,110,110,1);padding:4px;margin-bottom:5px;}
+    .opbtn{position:absolute;top: 0;right: 0;}
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;p class=&quot;ylcon&quot;&gt;
+    &lt;p class=&quot;tit&quot;&gt;
+    所有留言
+    &lt;/p&gt;
+    &lt;p id=&quot;messpId&quot;&gt;
+    &lt;p class=&quot;story&quot;&gt;
+    &lt;p class=&quot;opbtn&quot;&gt;&lt;/p&gt;
+    &lt;p class=&quot;story_t&quot;&gt;怜星&lt;/p&gt;
+    &lt;p class=&quot;story_time&quot;&gt;2015/07/12 20:48&lt;/p&gt;
+    &lt;p class=&quot;story_m&quot;&gt;我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,他们的八卦呢我想问最近最火的tfboys呢？！他们的八卦呢？！&lt;/p&gt;
+    &lt;p class=&quot;story_hf&quot;&gt;@剑花烟雨:的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契&lt;/p&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;story&quot;&gt;
+    &lt;p class=&quot;opbtn&quot;&gt;&lt;/p&gt;
+    &lt;p class=&quot;story_t&quot;&gt;怜星&lt;/p&gt;
+    &lt;p class=&quot;story_time&quot;&gt;2015/07/12 20:48&lt;/p&gt;
+    &lt;p class=&quot;story_m&quot;&gt;我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,他们的八卦呢我想问最近最火的tfboys呢？！他们的八卦呢？！&lt;/p&gt;
+    &lt;p class=&quot;story_hf&quot;&gt;@剑花烟雨:的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契&lt;/p&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;story&quot;&gt;
+    &lt;p class=&quot;opbtn&quot;&gt;&lt;/p&gt;
+    &lt;p class=&quot;story_t&quot;&gt;怜星&lt;/p&gt;
+    &lt;p class=&quot;story_time&quot;&gt;2015/07/12 20:48&lt;/p&gt;
+    &lt;p class=&quot;story_m&quot;&gt;我想问最近最火的tfboys呢他们的八卦呢我想问最近最火的tfboys呢,他们的八卦呢我想问最近最火的tfboys呢？！他们的八卦呢？！&lt;/p&gt;
+    &lt;p class=&quot;story_hf&quot;&gt;@剑花烟雨:的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契的是相对无言眼波如流的默契&lt;/p&gt;
+    &lt;/p&gt;
+    &lt;/p&gt;
+    &lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</pre><p></p><p>以上就是本文的全部内容，希望对大家的学习有所帮助，更多相关内容请关注PHP中文网！</p><p>相关推荐：</p><p><a href="http://www.php.cn/html5-tutorial-400928.html" target="_blank">html5生成柱状图(条形图)效果的实例代码</a><br></p><p><a href="http://www.php.cn/html5-tutorial-402409.html" target="_blank">如何利用HTML5实现分享到微信好友朋友圈QQ好友QQ空间微博二维码的功能</a><br></p><p></p><p class="clearfix"><span class="jbTestPos"></span></p><p>以上就是HTML5实现留言和回复的页面的详细内容，更多请关注php中文网其它相关文章！</p></span><div class="share layui-clear bdsharebuttonbox"><li><a href="javascript:;" data-cmd="weixin" class="wechat" target="_blank" rel="noopener"><i class="layui-icon">&#xe63a;</i>微信</a></li><li><a href="javascript:;" data-cmd="more" class="share-btn" target="_blank" rel="noopener"><i class="layui-icon">&#xe641;</i>分享</a></li></div><!--<img src="/static/images/article_wechat2021.jpg?1111" style="margin-top: 30px;" alt="php中文网最新课程二维码"/>--><a href="/k.html?t=2" target="_blank"><img src="https://img.php.cn/upload/course/000/000/071/621c239fc661a260.png" style="margin-top: 30px;" alt="php中文网直播班"></a><!--<a href="/app/" target="_blank"><img src="https://img.php.cn/upload/article/000/000/003/61ebc642cf61c488.png" style="margin-top: 30px;" alt="php中文网APP下载"/></a>--><p style="float:right;font-size:13px;color:#999;"><span class="red">声明：</span>本文内容由网友自发贡献，版权归原作者所有，本站不承担相应法律责任。如您发现有涉嫌抄袭侵权的内容，请联系admin@php.cn核实处理。</p><div class="tags layui-clear"><li>相关标签：<a href="/search?word=html5页面样式" target="_blank">html5页面样式</a> <a href="/search?word=html5" target="_blank">HTML5</a></li><li class="line"></li></div><div class="page layui-clear"><ul><li>上一篇：<a href="/html5-tutorial-402462.html">如何在微信端html5页面调用分享接口</a></li><li>下一篇：<a href="/html5-tutorial-402500.html">HTML5实现使用按钮控制背景音乐开关的方法</a></li></ul></div></div><p class="article-relative-header">相关文章</p><p class="article-relative-header">相关视频</p><hr class="layui-clear"><ul class="article-relative-ul"><li><span class="layui-badge-dots"></span><a class="relevant" href="/html5-tutorial-485134.html" target="_blank">html5离线存储有哪些</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/html5-tutorial-481308.html" target="_blank">深入解析asp.net中mvc4自定义404页面（...</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/html5-tutorial-112721.html" target="_blank">在今天，利用 HTML5 开发和发布大型跨平台网游...</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/html5-tutorial-35776.html" target="_blank">避免常见的六种HTML5错误用法 (5-6)</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/html5-tutorial-402476.html">HTML5实现留言和回复的页面</a></li></ul><ul class="article-relative-ul"><li><span class="layui-badge-dots"></span><a class="relevant" href="/code/557.html" target="_blank" title="HTML5浏览器支持">HTML5浏览器支持</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/code/565.html" target="_blank" title="HTML5新元素">HTML5新元素</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/code/581.html" target="_blank" title="HTML5内联SVG">HTML5内联SVG</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/code/586.html" target="_blank" title="HTML5 MathML">HTML5 MathML</a></li><li><span class="layui-badge-dots"></span><a class="relevant" href="/code/609.html" target="_blank" title="HTML5 拖放">HTML5 拖放</a></li></ul><div class="layui-clear"></div></div><div class="comment layui-clear CopyrightData"><div class="J_Header" id="J_Header"><p class="header-title">网友评论</p><p class="header-protocol">文明上网理性发言，请遵守 <a href="javascript:void(0);" target="_blank" rel="noopener">新闻评论服务协议</a></p><a class="article-comment-publish" href="javascript:void(0);" target="_blank" rel="noopener">我要评论</a></div><div class="layui-row diy-page"></div><div class="text-box layui-clear article_comment_textarea"><div class="box-left"><li><a href="javascript:login_trigger()" target="_blank" rel="noopener"><img src="/static/images/user_avatar.jpg" alt></a></li><li><a href="javascript:login_trigger()" target="_blank" rel="noopener"></a></li></div><div class="box-right"><textarea name="desc" placeholder="请输入内容" class="layui-textarea article_textarea"></textarea><button class="layui-btn article_publish" data-id="402476">立即提交</button></div></div></div><div class="article-hot layui-clear" style="margin-top:0"><h2>专题推荐</h2><ul><li><a href="/map/dugu.html" target="_blank"><img src="https://img.php.cn/upload/article/000/000/003/5d1ef1e9e866e635.jpg"></a><a class="course-title" href="/map/dugu.html" target="_blank">独孤九贱-php全栈开发教程</a><p class="course-type">全栈 <i class="layui-icon layui-icon-user"></i> 170W+</p><p class="course-des">主讲：Peter-Zhu  轻松幽默、简短易学，非常适合PHP学习入门</p></li><li><a href="/map/yunv.html" target="_blank"><img src="https://img.php.cn/upload/article/000/000/003/5d1ef236ca878949.jpg"></a><a class="course-title" href="/map/yunv.html" target="_blank">玉女心经-web前端开发教程</a><p class="course-type">入门 <i class="layui-icon layui-icon-user"></i> 80W+</p><p class="course-des">主讲：灭绝师太  由浅入深、明快简洁，非常适合前端学习入门</p></li><li><a href="/toutiao-409221.html" target="_blank"><img src="https://img.php.cn/upload/article/000/000/003/5d1ef2477c7d7587.jpg"></a><a class="course-title" href="/toutiao-409221.html" target="_blank">天龙八部-实战开发教程</a><p class="course-type">实战 <i class="layui-icon layui-icon-user"></i> 120W+</p><p class="course-des">主讲：西门大官人 思路清晰、严谨规范，适合有一定web编程基础学习</p></li></ul><div class="clear"></div></div></div><div class="layui-col-md4 article-list-right "><div class="panel"><div class="panel-title">作者信息</div><div id="profile-2"><div class="avatar-wrap"><a href="/member/153291.html" target="_blank" class="avatar-link"><img src="https://img.php.cn/upload/avatar/000/153/291/5c42bb52b397e610.jpg" class="func-um_user gravatar avatar avatar-120 um-avatar um-avatar-uploaded"></a></div><div class="profile-info"><p><span class="author-name">不言</span><i class="layui-icon layui-icon-auz" title="认证作者"></i></p><p class="author-description">认证0级讲师</p><div class="author-article"><dl class="list-one"><dt class="panel-title">最近文章</dt><dd><a href="/faq/417293.html" target="_blank" title="查找的快捷键是ctrl键加上什么键">查找的快捷键是ctrl键加上什么键</a><span><i class="layui-icon layui-icon-fire"></i>229278</span></dd><dd><a href="/faq/417285.html" target="_blank" title="剪切快捷键ctrl加什么？">剪切快捷键ctrl加什么？</a><span><i class="layui-icon layui-icon-fire"></i>374480</span></dd><dd><a href="/faq/417276.html" target="_blank" title="it是什么职业？">it是什么职业？</a><span><i class="layui-icon layui-icon-fire"></i>44076</span></dd></dl></div></div></div></div><div class="layui-clear"><a href="javascript:publish_article()" class="layui-btn layui-btn-danger article-add" target="_blank" rel="noopener">发布技术文章</a></div><div class="top-article layui-clear"><div class="layui-tab layui-tab-card"><ul class="layui-tab-title"><li class="layui-this">最新文章</li><li>热门排行</li></ul><div class="layui-tab-content"><div class="layui-tab-item layui-show"><ul><p class="top-img"><!--<a href='/vip.html' target="_blank" title='VIP会员'><img src='https://img.php.cn/upload/article/000/000/003/5f4de931a5deb813.png' style="width: 100%"></a>--><a href="https://www.php.cn/k.html?t=2" target="_blank" title="线上直播班"><img src="https://img.php.cn/upload/course/000/000/071/621c2291d2dc2919.png" style="width: 100%"></a><!--<a href='https://www.php.cn/q.html' target="_blank" title='大前端线上直播班'><img src='https://img.php.cn/upload/article/000/000/001/61760a80eefec303.png' style="width: 100%"></a>--></p><li><a href="/html5-tutorial-485290.html" target="_blank" title="html5的doctype声明是什么">html5的doctype声明是什么</a></li><li><a href="/html5-tutorial-485276.html" target="_blank" title="html5编辑器有哪些">html5编辑器有哪些</a></li><li><a href="/html5-tutorial-485134.html" target="_blank" title="html5离线存储有哪些">html5离线存储有哪些</a></li><li><a href="/html5-tutorial-484442.html" target="_blank" title="html5新增了什么">html5新增了什么</a></li><li><a href="/html5-tutorial-483489.html" target="_blank" title="h5新增标签audio与video的使用">h5新增标签audio与video的使用</a></li><li><a href="/html5-tutorial-481662.html" target="_blank" title="html5 app开发框架有哪些">html5 app开发框架有哪些</a></li><li><a href="/html5-tutorial-481607.html" target="_blank" title="你值得了解的WEB前端跨域解决方案（代码详解）">你值得了解的WEB前端跨域解决方案（代码详解）</a></li><li><a href="/html5-tutorial-481408.html" target="_blank" title="手把手教你使用给站点开启https和http2（附代码）">手把手教你使用给站点开启https和http2（附代码）</a></li></ul></div><div class="layui-tab-item"><ul><p class="top-img"><a href="/toutiao-387072.html" target="_blank" title="面对巨额亏损的PHP中文网，我该为情怀买单吗？（猪哥）"><img src="https://img.php.cn/upload/article/000/000/003/5b890a9e4417f872.png" style="width: 100%"></a></p><li><a href="/html5-tutorial-414835.html" target="_blank" title="h5是什么">h5是什么</a></li><li><a href="/html5-tutorial-413675.html" target="_blank" title="app是什么意思">app是什么意思</a></li><li><a href="/html5-tutorial-413480.html" target="_blank" title="什么是前端和后端">什么是前端和后端</a></li><li><a href="/html5-tutorial-417718.html" target="_blank" title="不懂代码怎么制作h5页面？H5页面制作平台推荐">不懂代码怎么制作h5页面？H5页面制作平台推荐</a></li><li><a href="/html5-tutorial-359814.html" target="_blank" title="Google AMP 是什么鬼？">Google AMP 是什么鬼？</a></li><li><a href="/html5-tutorial-357181.html" target="_blank" title="HTML5开发实例-3D全景(ThreeJs全景Demo) 详解（图）">HTML5开发实例-3D全景(ThreeJs全景Demo) 详解（图）</a></li><li><a href="/html5-tutorial-403035.html" target="_blank" title="HTML5如何实现视频直播功能">HTML5如何实现视频直播功能</a></li><li><a href="/html5-tutorial-412500.html" target="_blank" title="如何用HTML5在页面中插入可自动播放的视频">如何用HTML5在页面中插入可自动播放的视频</a></li></ul></div></div></div></div><!--				--><!--		<div class="article-course	php-news-right-imginfo">--><!--		<a href="https://s.click.taobao.com/HSS8Uau" rel="nofllow" target="_blank" >--><!--					<img src='https://img.php.cn/upload/course/000/000/071/621b3be8266ab384.jpg'  width='340'>--><!--				</a>--><!--				</div>--><!--		--><div class="article-ad article-course php-news-right-imginfo"><div class="r-title"><i class="layui-icon layui-icon-praise"></i>推荐视频教程</div><li><a href="/course/179.html" target="_blank"><img src="https://img.php.cn/upload/course/000/000/003/5a17982d48686254.jpg" alt="javascript初级视频教程" height="60"></a><span><a href="/course/179.html" target="_blank">javascript初级视频教程</a></span></li><li><a href="/course/181.html" target="_blank"><img src="https://img.php.cn/upload/course/000/000/003/5a179283c3885703.jpg" alt="jquery 基础视频教程" height="60"></a><span><a href="/course/181.html" target="_blank">jquery 基础视频教程</a></span></li></div><div class="article-ad mt-20" id="aritcle_detail_new"><div class="r-title"><i class="layui-icon layui-icon-video"></i>视频教程分类</div><ul class="course-category-lists layui-clear"><li><a href="/course/list/29/type/2.html" target="_blank"><div class="course-category-child-first">php视频教程</div><div class="course-category-child"></div></a></li><li><a href="/course/list/11.html" target="_blank"><div class="course-category-child-first">html视频教程</div><div class="course-category-child"></div></a></li><li><a href="/course/list/12.html" target="_blank"><div class="course-category-child-first">css视频教程</div><div class="course-category-child"></div></a></li><li><a href="/course/list/17.html" target="_blank"><div class="course-category-child-first">JS视频教程</div><div class="course-category-child"></div></a></li><li><a href="/course/list/19.html" target="_blank"><div class="course-category-child-first">jQuery视频教程</div><div class="course-category-child"></div></a></li><li><a href="/course/list/51.html" target="_blank"><div class="course-category-child-first">mysql视频教程</div><div class="course-category-child"></div></a></li><li><a href="/course/list/33.html" target="_blank"><div class="course-category-child-first">Linux视频教程</div><div class="course-category-child"></div></a></li><li><a href="/course/list/30.html" target="_blank"><div class="course-category-child-first">Python视频教程</div><div class="course-category-child"></div></a></li></ul></div></div></div></div><!--技术文章--><script src="/static/ueditor/third-party/SyntaxHighlighter/shCore.js?3.1.1"></script><script>article_status = 153291;</script><script type="text/javascript" src="/static/js/jquery.min.js"></script><script src="https://vdse.bdstatic.com//search-video.v1.min.js"></script><iframe src="/adapp1.html?1646896827" frameborder="0" style="position: fixed;bottom:0;right:0;z-index:99999;"></iframe><div class="layui-clear layui-bg-black php-ul-li footer_top_margin"><div class="layui-row  layui-main"><div class="layui-col-md9"><ul class="php-float-left"><li><a href="/" target="_blank" title="网站首页">网站首页 </a></li><li><a href="/course/list/29/type/2.html" target="_blank" title="PHP视频">PHP视频</a></li><li><a href="/course/list/29/type/4.html" target="_blank" title="PHP实战">PHP实战</a></li><li><a href="/course/list/29/type/1.html" target="_blank" title="PHP代码">PHP代码</a></li><li><a href="/course/list/29/type/3.html" target="_blank" title="PHP手册">PHP手册</a></li><li><a href="/wikis.html" target="_blank" title="词条">词条</a></li><li><a href="/write.html" target="_blank" title="手记">手记</a></li><li><a href="/dic.html" target="_blank" title="手记">编程词典</a></li><li><a href="/k.html" target="_blank">php培训</a></li></ul><p class="layui-clear footer_phpcn">php中文网：公益在线php培训，帮助PHP学习者快速成长！</p><p class="footer_phpcn_record">Copyright 2014-2021 https://www.php.cn/ All Rights Reserved | <a href="https://beian.miit.gov.cn/" style="color: #9c9c9c;" rel="nofollow" target="_blank">苏ICP备2020058653号-1</a><a href="http://112.30.63.109:8887/showEi?id=6a58f74d17984675aa1b671d0fa101cf&url=php.cn" rel="nofollow" target="_blank"><img src="/static/images/foot_line.gif" width="15"></a><span class="footer_phpcn_say" style="padding-left:15px;"><a href="/about/us.html" target="_blank">关于我们</a><a href="/about/disclaimer.html" target="_blank" class="mr10">免责申明</a><a href="/about/donate.html" class="mr10" target="_blank">赞助与捐赠</a><a href="/blog/detail/20304.html" target="_blank">广告合作</a></span></p></div><div class="layui-col-md3" style="padding-top:15px;"><img src="/static/images/phpcn_erwei.jpg" width="100">&nbsp;&nbsp;
+                <img src="/static/images/qq.jpg" width="100"></div></div></div><style>.layui-fixbar{bottom:200px;}</style><input type="hidden" id="verifycode" value="/captcha.html"><script src="/static/js/jquery.min.js"></script><script src="/static/layui/layui.js"></script><script type="text/javascript" src="/static/js/global.min.js?5.4.93"></script><script>var _hmt = _hmt || [];(function(){var hm = document.createElement("script");hm.src="//hm.baidu.com/hm.js?aaf8dba0861f46190106021371583c62";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if(curProtocol === 'https'){bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}else{bp.src = 'http://push.zhanzhang.baidu.com/push.js';};var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(bp, s);})();</script><script type="text/javascript" src="/static/js/jquery.cookie.js"></script><script>var topadshow = $.cookie('phpcndatatopadshows');if(!topadshow&&1==2){$('.topimages').show();var topobj = $('.topimages').find('.time');var topobj_day = $('.topimages .time').find('.day');var topobj_hours = $('.topimages .time').find('.hours');var topobj_minutes = $('.topimages .time').find('.minutes');var topobj_second = $('.topimages .time').find('.second');var topday = parseInt(topobj_day.html());var tophours = parseInt(topobj_hours.html());var topminutes = parseInt(topobj_minutes.html());var topsecond = parseInt(topobj_second.html());setInterval(function(){if(topsecond > 0){topsecond = topsecond-1;}else{if(topminutes > 0){topminutes = topminutes-1;topsecond = 59;}else{if(tophours > 0){tophours = tophours-1;topminutes = 59;topsecond = 59;}else{if(topday > 0){topday = topday -1;tophours = 23;topminutes = 59;topsecond = 59;}else{topobj.html("<p><span>活动已结束</span></p>");}}}}topobj_second.html(topsecond);topobj_minutes.html(topminutes);topobj_hours.html(tophours);topobj_day.html(topday);},1000);}$('.topimages .layui-icon-close').click(function(){$.cookie('phpcndatatopadshows',1,{expires:7});$('.topimages').hide();});</script><link rel="stylesheet" id="_main-css" href="/static/css/viewer.min.css?2" type="text/css" media="all"><script type="text/javascript" src="/static/js/viewer.min.js?1"></script><script type="text/javascript" src="/static/js/jquery-viewer.min.js"></script><script>$('.content_article_viewer_show').viewer();</script></body></html>
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.lixingyong.com/2022/03/08/WeChanQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.lixingyong.com/2022/03/08/WeChanSQ96cd3850a85b5b62.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <!-- <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer> -->
+        <!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2022/03/10/a/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                </h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2022/03/10/String/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.lixingyong.com/2022/03/08/fm.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.lixingyong.com/2022/03/08/fm.webp">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                String</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+
+
+
+   <section class="author-profile">
+  <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+    <a href="/about/" class="profile gravatar"><img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+    <div class="meta">
+      <span class="title">Author</span>
+      <h3 itemprop="name">
+      <a href="https://github.com/JoinCreator/JoinCreator.github.io" itemprop="url" rel="author">ZHANG</a>
+      </h3>
+    </div>
+  </div>
+  <hr>
+  <p><i class="iconfont icon-write"></i>九十九次的理论不如一次的行动来得实际!</p>
+</section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+<!-- <section class="author-profile">
+  <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+    <a href="/about/" class="profile gravatar"><img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+    <div class="meta">
+      <span class="title">Author</span>
+      <h3 itemprop="name">
+      <a href="https://github.com/JoinCreator/JoinCreator.github.io" itemprop="url" rel="author">ZHANG</a>
+      </h3>
+    </div>
+  </div>
+  <hr>
+  <p><i class="iconfont icon-write"></i>九十九次的理论不如一次的行动来得实际!</p>
+</section> -->
+
+
+
+
+<!-- <section class="author-profile">
+    <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+      <a href="/about/" class="profile gravatar"><img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+      <div class="meta">
+        <span class="title">Author</span>
+        <h3 itemprop="name">
+        <a href="https://github.com/JoinCreator/JoinCreator.github.io" itemprop="url" rel="author">ZHANG</a>
+        </h3>
+      </div>
+    </div>
+    <hr>
+    <p><i class="iconfont icon-write"></i>九十九次的理论不如一次的行动来得实际!</p>
+  </section> -->
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 ZHANG<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2022</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">欢迎 
+          <a href="http://kyw666.cf/
+          " target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">
+          一起分享</a> <i class="iconfont icon-sakura rotating" style="color: #f7012a;display:inline-block"></i>
+            by <a href="http://kyw666.cf/
+            " target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">
+              wyk666</a>&<a href="http://kyw666.cf/
+              " target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">
+                有趣的</a>,Come on together</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">ZHANGSs</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人链
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/Webhtml">
+          <span class="faa-parent animated-hover">
+            <i class="fa  " aria-hidden="true"></i>
+            留言
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  博主
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2660651585"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

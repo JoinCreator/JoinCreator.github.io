@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">安装Docker | zhang</title>
+  <title itemprop="name">zhang</title>
   
     <link rel="shortcut icon" href="/images/R-C.ico">
   
@@ -245,30 +245,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
 <div class="pattern-center-blank"></div>
 
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg);" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      安装Docker</h1>
-      <p class="entry-census">
-        <span>
-          <a href="">
-            <img src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
-          </a>
-        </span>
-        <span>
-          <a href="">ZHANG</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2022-3-9<span class="bull">
-        ·</span>
-      <span id="busuanzi_value_page_pv"></span>次阅读</p>
-    </header>
-  </div>
-
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
@@ -276,126 +252,53 @@
         <div class="toc"></div>
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
+          <header class="entry-header">
+            <h1 class="entry-title"></h1>
+            <p class="entry-census">&nbsp;·&nbsp;2022-3-10&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
         <div class="entry-content">
-          <h1 id="0-安装Docker"><a href="#0-安装Docker" class="headerlink" title="0.安装Docker"></a>0.安装Docker</h1><p>Docker 分为 CE 和 EE 两大版本。CE 即社区版（免费，支持周期 7 个月），EE 即企业版，强调安全，付费使用，支持周期 24 个月。</p>
-<p>Docker CE 分为 <code>stable</code> <code>test</code> 和 <code>nightly</code> 三个更新频道。</p>
-<p>官方网站上有各种环境下的 <a href="https://docs.docker.com/install/" target="_blank" rel="noopener">安装指南</a>，这里主要介绍 Docker CE 在 CentOS上的安装。</p>
-<h1 id="1-CentOS安装Docker"><a href="#1-CentOS安装Docker" class="headerlink" title="1.CentOS安装Docker"></a>1.CentOS安装Docker</h1><p>Docker CE 支持 64 位版本 CentOS 7，并且要求内核版本不低于 3.10， CentOS 7 满足最低内核的要求，所以我们在CentOS 7安装Docker。</p>
-<h2 id="1-1-卸载（可选）"><a href="#1-1-卸载（可选）" class="headerlink" title="1.1.卸载（可选）"></a>1.1.卸载（可选）</h2><p>如果之前安装过旧版本的Docker，可以使用下面命令卸载：</p>
-<pre><code>yum remove docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
-                  docker-selinux \
-                  docker-engine-selinux \
-                  docker-engine \
-                  docker-ce
-</code></pre><h2 id="1-2-安装docker"><a href="#1-2-安装docker" class="headerlink" title="1.2.安装docker"></a>1.2.安装docker</h2><p>首先需要大家虚拟机联网，安装yum工具</p>
-<pre><code class="sh">sudo yum install -y yum-utils \
-           device-mapper-persistent-data \
-           lvm2 --skip-broken
-</code></pre>
-<p>然后更新本地镜像源：</p>
-<pre><code class="shell"># 设置docker镜像源
-yum-config-manager \
-    --add-repo \
-    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-
-sed -i &#39;s/download.docker.com/mirrors.aliyun.com\/docker-ce/g&#39; /etc/yum.repos.d/docker-ce.repo
-
-yum makecache fast
-</code></pre>
-<p>然后输入命令：</p>
-<pre><code class="shell">yum install -y docker-ce
-</code></pre>
-<p>docker-ce为社区免费版本。稍等片刻，docker即可安装成功。</p>
-<h2 id="1-3-启动docker"><a href="#1-3-启动docker" class="headerlink" title="1.3.启动docker"></a>1.3.启动docker</h2><p>Docker应用需要用到各种端口，逐一去修改防火墙设置。非常麻烦，因此建议大家直接关闭防火墙！</p>
-<pre><code class="sh"># 关闭
-systemctl stop firewalld
-# 禁止开机启动防火墙
-systemctl disable firewalld
-</code></pre>
-<p>通过命令启动docker：</p>
-<pre><code class="sh">systemctl start docker  # 启动docker服务
-
-systemctl stop docker  # 停止docker服务
-
-systemctl restart docker  # 重启docker服务
-</code></pre>
-<p>然后输入命令，可以查看docker版本：</p>
-<pre><code>docker -v
-</code></pre><h2 id="1-4-配置镜像加速"><a href="#1-4-配置镜像加速" class="headerlink" title="1.4.配置镜像加速"></a>1.4.配置镜像加速</h2><p>docker官方镜像仓库网速较差，我们需要设置国内镜像服务：</p>
-<p>参考阿里云的镜像加速文档：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors" target="_blank" rel="noopener">https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors</a></p>
-<pre><code class="shell">sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json &lt;&lt;-&#39;EOF&#39; 
-{ 
-&quot;registry-mirrors&quot;:[&quot;https://n0dwemtq.mirror.aliyuncs.com&quot;] 
-}
-EOF
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-</code></pre>
-<h1 id="2-CentOS7安装DockerCompose"><a href="#2-CentOS7安装DockerCompose" class="headerlink" title="2.CentOS7安装DockerCompose"></a>2.CentOS7安装DockerCompose</h1><h2 id="2-1-下载"><a href="#2-1-下载" class="headerlink" title="2.1.下载"></a>2.1.下载</h2><p>Linux下需要通过命令下载：</p>
-<pre><code class="sh"># 安装
-curl -L https://github.com/docker/compose/releases/download/1.23.1/docker-compose-`uname -s`-`uname -m` &gt; /usr/local/bin/docker-compose
-</code></pre>
-<p>如果下载速度较慢，或者下载失败，可以使用课前资料提供的docker-compose文件：</p>
-<p><img src="assets/image-20210417133020614.png" alt="image-20210417133020614"></p>
-<p>上传到<code>/usr/local/bin/</code>目录也可以。</p>
-<h2 id="2-2-修改文件权限"><a href="#2-2-修改文件权限" class="headerlink" title="2.2.修改文件权限"></a>2.2.修改文件权限</h2><p>修改文件权限：</p>
-<pre><code class="sh"># 修改权限
-chmod +x /usr/local/bin/docker-compose
-</code></pre>
-<h2 id="2-3-Base自动补全命令："><a href="#2-3-Base自动补全命令：" class="headerlink" title="2.3.Base自动补全命令："></a>2.3.Base自动补全命令：</h2><pre><code class="sh"># 补全命令
-curl -L https://raw.githubusercontent.com/docker/compose/1.29.1/contrib/completion/bash/docker-compose &gt; /etc/bash_completion.d/docker-compose
-</code></pre>
-<p>如果这里出现错误，需要修改自己的hosts文件：</p>
-<pre><code class="sh">echo &quot;199.232.68.133 raw.githubusercontent.com&quot; &gt;&gt; /etc/hosts
-</code></pre>
-<h1 id="3-Docker镜像仓库"><a href="#3-Docker镜像仓库" class="headerlink" title="3.Docker镜像仓库"></a>3.Docker镜像仓库</h1><p>搭建镜像仓库可以基于Docker官方提供的DockerRegistry来实现。</p>
-<p>官网地址：<a href="https://hub.docker.com/_/registry" target="_blank" rel="noopener">https://hub.docker.com/_/registry</a></p>
-<h2 id="3-1-简化版镜像仓库"><a href="#3-1-简化版镜像仓库" class="headerlink" title="3.1.简化版镜像仓库"></a>3.1.简化版镜像仓库</h2><p>Docker官方的Docker Registry是一个基础版本的Docker镜像仓库，具备仓库管理的完整功能，但是没有图形化界面。</p>
-<p>搭建方式比较简单，命令如下：</p>
-<pre><code class="sh">docker run -d \
-    --restart=always \
-    --name registry    \
-    -p 5000:5000 \
-    -v registry-data:/var/lib/registry \
-    registry
-</code></pre>
-<p>命令中挂载了一个数据卷registry-data到容器内的/var/lib/registry 目录，这是私有镜像库存放数据的目录。</p>
-<p>访问<a href="http://YourIp:5000/v2/_catalog" target="_blank" rel="noopener">http://YourIp:5000/v2/_catalog</a> 可以查看当前私有镜像服务中包含的镜像</p>
-<h2 id="3-2-带有图形化界面版本"><a href="#3-2-带有图形化界面版本" class="headerlink" title="3.2.带有图形化界面版本"></a>3.2.带有图形化界面版本</h2><p>使用DockerCompose部署带有图象界面的DockerRegistry，命令如下：</p>
-<pre><code class="yaml">version: &#39;3.0&#39;
-services:
-  registry:
-    image: registry
-    volumes:
-      - ./registry-data:/var/lib/registry
-  ui:
-    image: joxit/docker-registry-ui:static
-    ports:
-      - 8080:80
-    environment:
-      - REGISTRY_TITLE=传智教育私有仓库
-      - REGISTRY_URL=http://registry:5000
-    depends_on:
-      - registry
-</code></pre>
-<h2 id="3-3-配置Docker信任地址"><a href="#3-3-配置Docker信任地址" class="headerlink" title="3.3.配置Docker信任地址"></a>3.3.配置Docker信任地址</h2><p>我们的私服采用的是http协议，默认不被Docker信任，所以需要做一个配置：</p>
-<pre><code class="sh"># 打开要修改的文件
-vi /etc/docker/daemon.json
-# 添加内容：
-&quot;insecure-registries&quot;:[&quot;http://192.168.150.101:8080&quot;]
-# 重加载
-systemctl daemon-reload
-# 重启docker
-systemctl restart docker
-</code></pre>
-
+          <!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <title>评论区留言</title>
+    <style type="text/css">
+        .div1,div{
+            width: 1350px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" id="div1">
+        <!-- 创建昵称和留言文本框 -->
+        <span>昵称：</span><input type="text" id="user" name="user">
+        <br>
+        <span>留言：</span><textarea id="lang"></textarea><br>
+        <!-- 创建提交评价按钮 -->
+        <input type="button" value="提交评价" id="btn">
+    </div>
+</body>
+<script type="text/javascript">
+    //通过id属性查找标签节点
+    var user=document.getElementById('user');
+    var lang=document.getElementById('lang');
+    //通过id属性查找提交评价按钮并绑定点击事件
+    document.getElementById('btn').onclick=function(){
+        //在html代码中创建一个div盒子
+        var cont=document.createElement('div');
+        //将获取到的数据，放到一创建好的盒子中
+        cont.innerHTML='<p>'+user.value+':'+lang.value+'</p><hr>';
+        //将创建好的div盒子及及内容显示在页面中
+        document.getElementById('div1').appendChild(cont);
+        user.value='';
+        lang.value='';
+    }
+</script>
+</html>
         </div>
         <!-- .entry-content -->
         <div class="single-reward">
@@ -424,36 +327,19 @@ systemctl restart docker
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2022/03/10/1.1.什么是Docker/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.lixingyong.com/2022/03/08/188cada9fd0294798b50394ce897dad7.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                Docker介绍及使用</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2021/12/12/安装elasticsearch/" rel="next">
+            <a href="/2022/03/10/abc/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.lixingyong.com/2022/03/08/fm.webp" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.lixingyong.com/2022/03/08/fm.webp">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gsh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                elasticsearch</h3>
+                </h3>
                 <hr>
               </div>
             </a>
